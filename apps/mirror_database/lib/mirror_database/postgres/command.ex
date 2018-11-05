@@ -50,7 +50,6 @@ defmodule Mirror.Database.Postgres.Command do
                 {arguments, env(option) ++ env_values}
               rescue
                 e ->
-                  IO.inspect(e)
                   IO.inspect({:unknown_option, option})
                   {arguments, env_values}
               end

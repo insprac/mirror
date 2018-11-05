@@ -1,4 +1,5 @@
 # Mirror
 
-**TODO: Add description**
+A Postgres automated backup application built in Elixir.
+
 

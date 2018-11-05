@@ -6,7 +6,6 @@ defmodule Mirror.Files.S3 do
 
   @spec upload(Files.path, Files.file_content) :: response
   def upload(path, content) do
-    IO.inspect({Config.aws_bucket(), path(path), content})
     ExAws.S3.put_object(Config.aws_bucket(), path(path), content)
     |> request()
   end

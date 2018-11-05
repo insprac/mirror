@@ -20,7 +20,7 @@ defmodule Mirror.Database.Postgres do
     end
   end
 
-  @spec execute_command(PSQL.db_name, PSQL.command, PSQL.options :: PSQL.result
+  @spec execute_command(PSQL.db_name, PSQL.command, PSQL.options) :: PSQL.result
   def execute_command(db_name, command, options \\ []) do
     psql(options ++ [db_name: db_name, command: command])
   end
